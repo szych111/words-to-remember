@@ -1,0 +1,43 @@
+body {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+.main {
+    background-color: teal;
+    max-width: 50vw;
+    /* height: 40vh; */
+    color: whitesmoke;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.wrapper {
+    border: 2px solid burlywood;
+    padding: 2vw 3vw;
+    margin: 2vw 2vw;
+}
+
+.btn {
+    background-color: burlywood;
+    color: rgba(78, 61, 51, 0.7);
+    font-weight: bold;
+    font-size: calc(10px+3vw);
+    outline: none;
+    border: none;
+    padding: 1em 3em;
+    margin: 0 .2em;
+    border-radius: 2px;
+    transition: 500ms;
+}
+
+.btn:focus, .btn:hover {
+    background-color: rgb(163, 122, 98);
+    color: rgba(255,255,255, 0.5);
+    cursor: pointer;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remember</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="main">
+        <div class="main-buttons wrapper">
+            <a href="#add-new-word">
+                <button class="btn">
+                    ADD NEW
+                </button>
+            </a>
+            <a href="#learn">
+                <button class="btn">
+                    LEARN
+                </button>
+            </a>
+        </div>
+    <section id="add-new-word">
+    <div class="add-new-word wrapper">
+        <form>
+            <label for="de-word">German:</label>
+            <input type="text" id="new-de-word" name="de-word" placeholder="new-de-word"><br><br>
+            <label for="en-word">English:</label>
+            <input type="text" id="new-en-word" name="en-word" placeholder="new-en-word"><br><br>
+            <label for="example">Example:</label>
+            <input type="text" id="examples" name="example" placeholder="examples"><br><br>
+            <input type="submit" value="Add" class="btn" id="add-new-word-btn">
+          </form> 
+    </div>
+</section>
+<section id="learn">
+    <div class="learn wrapper">
+        <form>
+            <label for="de-word">German:</label>
+            <input type="text" id="de-word" name="de-word" placeholder="de"><br><br>
+            <label for="en-word">English:</label>
+            <input type="text" id="en-word" name="en-word" placeholder="en"><br><br>
+            <p id="test-par" class="learn-par"></p>
+            <p id="examples-par" class="learn-par"></p><br><br>
+            <input type="submit" value="Check" class="btn" id="check-btn">
+          </form> 
+    </div>
+</section>
+</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
