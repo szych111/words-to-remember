@@ -1,32 +1,54 @@
 
 class Word {
     constructor(german, english, examples) {
-        this.german = german;
-        this.english = english;
-        this.examples = [examples];
-        this.repeated = 0;
+        this._german = german;
+        this._english = english;
+        this._examples = examples;
+        this._index = 0;
+        this._repeated = 0;
+    }
+
+    set german(newGermanWord) {
+        this._german = newGermanWord;
     }
 
     get german() {
-        return this.german;
+        return this._german;
+    }
+
+    set english(newEnglishWord) {
+        this._english = english;
     }
 
     get english() {
-        return this.english
+        return this._english
+    }
+
+    set examples(newExamples) {
+        this._examples = newExamples;
     }
 
     get examples() {
-        return this.examples
-    }
-
-    get example2() {
-        return this.example2
+        return this._examples
     }
 
     incrementRepeated() {
         return this.repeated++
     }
 }
+
+const gut = new Word ('gut', 'good')
+const aufgeben = new Word ('aufgeben', 'give up')
+const trostpreis = new Word ('der Trostpreis', 'consolation prize')
+const gemeinsam = new Word ('together, jointly', 'together', 'der Grundstück gehörte ihnen gemeinsam')
+const akne = new Word ('die Akne', 'acne', 'mit Knötchen- und Pustelbildung einhergehende Entzündung der Talgdrüsen')
+
+console.log(gemeinsam.examples)
+
+console.log(trostpreis.english)
+
+console.log(gut.german)
+
 // add new form
 let addButton = document.getElementById('add-new-word-btn');
 console.log(addButton)
@@ -50,9 +72,10 @@ let examplesPar = document.getElementById('examples-paragraph')
 console.log(examplesPar)
 
 
-addButton.addEventListener('click', () => {
+addButton.addEventListener('click', event => {
+    event.preventDefault()
     console.log('klik');
-    let testPar = document.getElementById('test-par')
-    testPar.textContent = 'hello'
-    console.log(testPar.textContent)
+    let newWordToRemember = new Word (newDeWord, newEnWord, newExamples)
 })
+
+
