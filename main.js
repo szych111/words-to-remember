@@ -43,39 +43,31 @@ const trostpreis = new Word ('der Trostpreis', 'consolation prize')
 const gemeinsam = new Word ('together, jointly', 'together', 'der Grundstück gehörte ihnen gemeinsam')
 const akne = new Word ('die Akne', 'acne', 'mit Knötchen- und Pustelbildung einhergehende Entzündung der Talgdrüsen')
 
-console.log(gemeinsam.examples)
-
-console.log(trostpreis.english)
-
-console.log(gut.german)
-
-// add new form
+// add-new form
 let addButton = document.getElementById('add-new-word-btn');
-console.log(addButton)
-let newDeWord = document.getElementById('new-de-word').value
-console.log(newDeWord)
-let newEnWord = document.getElementById('new-en-word').value
-console.log(newEnWord)
-let newExamples = document.getElementById('examples').value
-console.log(newExamples)
-
-// learn form
-let checkButton = document.getElementById('check-btn');
-console.log(checkButton)
-let deWord = document.getElementById('de-word').value
-console.log(deWord)
-let enWord = document.getElementById('en-word').value
-console.log(enWord)
-let testPar = document.getElementById('test-par')
-console.log(testPar)
-let examplesPar = document.getElementById('examples-paragraph')
-console.log(examplesPar)
-
 
 addButton.addEventListener('click', event => {
     event.preventDefault()
+    let newDeWord = document.getElementById('new-de-word').value
+    let newEnWord = document.getElementById('new-en-word').value
+    let newExamples = document.getElementById('examples').value
+    let deWordPar = document.getElementById('de-word-par')
+    let enWordPar = document.getElementById('en-word-par')
+    let newExamplesPar = document.getElementById('examples-par')
     console.log('klik');
-    let newWordToRemember = new Word (newDeWord, newEnWord, newExamples)
+    new Word (newDeWord, newEnWord, newExamples)
+    deWordPar.innerText = newDeWord
+    enWordPar.innerText = newEnWord
+    newExamplesPar.innerText = newExamples
 })
+
+
+// learn form
+let checkButton = document.getElementById('check-btn');
+let deWord = document.getElementById('de-word').value
+let enWord = document.getElementById('en-word').value
+let testPar = document.getElementById('test-par')
+let examplesPar = document.getElementById('examples-paragraph')
+
 
 

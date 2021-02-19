@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="new-de">German:</label>
+    <input type="text" id="new-de">
+    <label for="new-en">English:</label>
+    <input type="text" id="new-en">
+    <label for="new-examples">Examples:</label>
+    <input type="text" id="new-examples">
+    <button onclick="getValue()">get value</button>
+    <p id="input-value"></p>
+    <script>
+        
+        function getValue () {
+            let par = document.getElementById('input-value')
+            let newDe = document.getElementById('new-de').value
+            let newEn = document.getElementById('new-en').value
+            let newEx = document.getElementById('new-examples').value
+            par.innerText = newDe + ', ' + newEn + ', ' + newEx
+        }
+    </script>
+</body>
+</html>
